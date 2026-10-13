@@ -1,0 +1,46 @@
+venv/
+venv311/
+venv_old/
+__pycache__/
+*.py[cod]
+
+.env
+.env.*
+!.env.example
+
+DATASET/
+uploads/*
+!uploads/.gitkeep
+
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+
+# Exclude X-ray validation dataset
+XRAY_VALIDATOR/
+
+# Upload only the models used by app.py
+models/*
+!models/best_model.keras
+!models/xray_validator_final.keras
+
+# Keep only models used by the app
+models/*
+!models/best_model.keras
+!models/xray_validator_final.keras
+
+# Exclude generated reports and obsolete scripts
+reports/
+old_versions/
+
+# Exclude local training outputs and logs
+training_log.csv
+classification_report.txt
+roc_auc_scores.txt
+accuracy_plot.png
+loss_plot.png
+confusion_matrix.png
+roc_curve.png
+
+# Exclude generated medical heatmap images
+static/heatmaps/*

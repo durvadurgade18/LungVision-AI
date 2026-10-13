@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specialist Doctors</title>
+
+    <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/specialists.css') }}">
+</head>
+<body class="specialist-page">
+
+    <header class="navbar">
+
+    <div class="container navbar-container">
+
+       <a href="{{ url_for('home') }}" class="logo">
+
+    <img class="logo-img"
+         src="{{ url_for('static', filename='images/logo/logo.png') }}"
+         alt="Logo">
+
+    <div class="logo-text">
+        <span>LungVision</span>
+        <strong>AI</strong>
+    </div>
+
+</a>
+
+        <nav class="nav-menu">
+
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('predict_page') }}" class="nav-link">Predict</a>
+            <a href="{{ url_for('assistant_page') }}" class="nav-link">Assistant</a>
+            <a href="{{ url_for('specialists') }}" class="nav-link">Specialists</a>
+            <a href="{{ url_for('about') }}" class="nav-link">About</a>
+            <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+    <section>
+
+        <h1>Our Specialist Doctors</h1>
+        <p>Choose the best specialist for your lung disease.</p>
+
+        <div class="specialist-container">
+
+            <div class="card specialist-card">
+                <img src="{{ url_for('static', filename='images/doctors/pulmonologist.png') }}">
+                <h2>Dr. Raj Sharma</h2>
+                <p>Pulmonologist</p>
+                <p>15 Years Experience</p>
+                <a href="{{ url_for('appointment') }}?doctor=Dr. Raj Sharma&disease=Atelectasis">
+    <button class="btn">Book Appointment</button>
+</a>
+           </div>
+
+            <div class="card specialist-card">
+                <img src="{{ url_for('static', filename='images/doctors/lung-cancer-specialist.png') }}">
+                <h2>Dr. Priya Patel</h2>
+                <p>Lung Cancer Specialist</p>
+                <p>12 Years Experience</p>
+                <a href="{{ url_for('appointment') }}?doctor=Dr. Priya Patel&disease=Lung Cancer">
+    <button class="btn">Book Appointment</button>
+</a>
+                
+            </div>
+
+            <div class="card specialist-card">
+                <img src="{{ url_for('static', filename='images/doctors/covid-specialist.png') }}">
+                <h2>Dr. Amit Verma</h2>
+                <p>COVID Specialist</p>
+                <p>10 Years Experience</p>
+                <a href="{{ url_for('appointment') }}?doctor=Dr. Amit Verma&disease=COVID-19">
+    <button class="btn">Book Appointment</button>
+</a>
+                
+            </div>
+
+            <div class="card specialist-card">
+                <img src="{{ url_for('static', filename='images/doctors/fibrosis-specialist.png') }}">
+                <h2>Dr. Sarah Wilson</h2>
+                <p>Pulmonary Fibrosis</p>
+                <p>14 Years Experience</p>
+                <a href="{{ url_for('appointment') }}?doctor=Dr. Sarah Wilson&disease=Pulmonary Fibrosis">
+    <button class="btn">Book Appointment</button>
+</a>
+               
+            </div>
+
+            <div class="card specialist-card">
+                <img src="{{ url_for('static', filename='images/doctors/emphysema-specialist.png') }}">
+                <h2>Dr. David Lee</h2>
+                <p>Emphysema Specialist</p>
+                <p>11 Years Experience</p>
+                <a href="{{ url_for('appointment') }}?doctor=Dr. David Lee&disease=Emphysema">
+    <button class="btn">Book Appointment</button>
+</a>
+                
+            </div>
+
+            <div class="card specialist-card">
+                <img src="{{ url_for('static', filename='images/doctors/atelectasis-specialist.png') }}">
+                <h2>Dr. Emily Johnson</h2>
+                <p>Atelectasis Specialist</p>
+                <p>9 Years Experience</p>
+                <a href="{{ url_for('appointment') }}?doctor=Dr. Emily Johnson&disease=Atelectasis">
+    <button class="btn">Book Appointment</button>
+</a>
+</div>
+
+<!-- New Separate Card -->
+<div class="card specialist-card">
+    <img src="{{ url_for('static', filename='images/doctors/TB specialist.jpeg') }}">
+    <h2>Dr. Rani Mehta</h2>
+    <p>Tuberculosis Specialist</p>
+    <p>5 Years Experience</p>
+
+    <a href="{{ url_for('appointment') }}?doctor=Dr. Rani Mehta&disease=Tuberculosis">
+        <button class="btn">Book Appointment</button>
+    </a>
+</div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 LungVision AI
+    </footer>
+
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/specialists.js') }}"></script>
+</body>
+</html>

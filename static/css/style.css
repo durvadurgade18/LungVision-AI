@@ -1,0 +1,257 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    background:linear-gradient(
+        135deg,
+        #020B1F,
+        #081B33,
+        #071c30
+    );
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Navbar */
+
+nav{
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(2,8,23,0.85);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid rgba(24,200,255,.2);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00D9FF;
+}
+
+/* Glass Card */
+
+.card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,217,255,0.2);
+}
+
+/* Buttons */
+
+.btn{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#00D9FF;
+    color:#000;
+    font-weight:600;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #00D9FF;
+}
+
+/* Section */
+
+section{
+    padding:80px 8%;
+}
+
+h1{
+    font-size:50px;
+}
+
+h2{
+    font-size:36px;
+    color:#00D9FF;
+}
+
+p{
+    color:#d3d3d3;
+    line-height:1.8;
+}
+
+/* Input Fields */
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:15px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    margin-top:10px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    border:1px solid rgba(0,217,255,0.2);
+}
+
+input::placeholder{
+    color:#bfbfbf;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid rgba(255,255,255,0.1);
+    margin-top:50px;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00D9FF;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#020B1F;
+}
+select {
+    background-color: #34445c;
+    color: rgb(213, 194, 194);
+    border: 1px solid #2aa9d2;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+
+select option {
+    background-color: #1b2b45;
+    color: white;
+}
+
+nav ul li button {
+
+    background: transparent;
+    border: none;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+
+nav ul li button:hover {
+
+    background: #fd3737;
+    color: white;
+
+}
+
+nav ul li a {
+
+    text-decoration: none;
+    color: white;
+
+}
+
+
+
+.specialist-page{
+    background-image: url("../images/backgrounds/hero-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.specialist-page::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: -1;
+}
+
+
+.appointment-page{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.appointment-page::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 10, 30, 0.65);
+    z-index: -1;
+}
+
+
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover{
+    color: #00D9FF;
+}
+
+/* Appointment Success */
+
+body{
+    padding-top:100px;
+}
+
+.card{
+    background:rgba(17,30,54,0.92);
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+}
+
+footer{
+    margin-top:40px;
+}

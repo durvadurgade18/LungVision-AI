@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LungVision AI | Intelligent Lung Disease Detection</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+ 
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    
+
+</head>
+
+<body>
+
+<!-- =========================
+        NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <div class="container navbar-container">
+
+        <a href="/home" class="logo">
+
+
+            <div class="logo-text">
+                <span>LungVision</span>
+                <strong>AI</strong>         
+            </div>
+
+        </a>
+        <nav class="nav-menu">
+
+            <a href="/home" class="nav-link">Home</a>
+            <a href="/predict" class="nav-link">Predict</a>
+            <a href="/assistant" class="nav-link">Assistant</a>
+            <a href="/specialists" class="nav-link">Specialists</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/contact" class="nav-link">Contact</a>
+
+        </nav>
+
+        <a href="/predict" class="get-started">
+
+            <span>Get Started</span>
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+        <a href="/logout" class="logout-btn">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+</a>
+
+        
+
+    </div>
+
+</header>
+
+<!-- =========================
+        HERO
+========================= -->
+
+<main>
+
+<section class="hero">
+
+    <div class="hero-background"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-particles"></div>
+
+    <div class="container hero-container">
+
+        <!-- LEFT -->
+
+        <div class="hero-content">
+
+            <div class="ai-badge">
+
+                <span class="badge-dot"></span>
+                <span>AI POWERED HEALTHCARE</span>
+
+            </div>
+
+            <h1>
+
+                Intelligent
+
+                <span>Lung Disease</span>
+
+                Detection
+
+            </h1>
+
+            <div class="hero-subtitle">
+
+                <span></span>
+
+                <strong>Using Deep Learning</strong>
+
+            </div>
+
+            <p class="hero-description">
+
+                <strong>
+
+                    Upload a chest X-ray image and receive instant AI-assisted
+                    detection for Tuberculosis, COVID-19, Lung Cancer,
+                    Pulmonary Fibrosis, Atelectasis,
+                    Emphysema and Pulmonary Edema.
+
+                </strong>
+
+            </p>
+
+            <!-- HERO BUTTONS -->
+
+            <div class="hero-buttons">
+
+                <a href="/predict" class="btn btn-primary">
+
+                    <i class="fa-solid fa-upload"></i>
+
+                    <span>Start Detection</span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+                <a href="#" id="watchDemoBtn" class="btn btn-secondary">
+    <i class="fa-solid fa-play"></i>
+    <span>Watch Demo</span>
+</a>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="hero-visual">
+
+            <div class="lung-glow"></div>
+
+            <img
+    src="{{ url_for('static', filename='images/illustrations/hero-lungs.png') }}"
+    alt="AI Lung"
+    class="hero-lungs">
+
+        </div>
+
+    </div>
+    </div>   <!-- hero-container ends -->
+<a href="#diseases" class="scroll-indicator">
+
+    <span>Scroll Down</span>
+
+    <i class="fa-solid fa-chevron-down"></i>
+
+</a>
+<!-- <div class="scroll-indicator">
+
+    <span>Scroll Down</span>
+
+    <i class="fa-solid fa-chevron-down"></i>
+
+</div> -->
+
+</section>
+
+</section>
+
+<!-- =====================================================
+     DISEASES SECTION
+===================================================== -->
+
+<section class="diseases-section" id="diseases">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Diseases We Detect</span>
+
+            <h2>AI Powered Lung Disease Detection</h2>
+
+            <p>
+                Our deep learning model analyzes chest X-rays and detects
+                multiple lung diseases with high accuracy.
+            </p>
+
+        </div>
+
+        <div class="disease-grid">
+
+            <!-- Tuberculosis -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/tuberculosis.png') }}" alt="Tuberculosis">
+
+                <h3>Tuberculosis</h3>
+
+                <p>
+                    A bacterial infection that mainly affects the lungs and
+                    spreads through the air.
+                </p>
+
+            </div>
+
+            <!-- COVID -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/covid.png') }}" alt="COVID-19">
+
+                <h3>COVID-19</h3>
+
+                <p>
+                    Viral respiratory disease that can cause lung inflammation
+                    and breathing difficulty.
+                </p>
+
+            </div>
+
+            <!-- Lung Cancer -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/lung-cancer.png') }}" alt="Lung Cancer">
+
+                <h3>Lung Cancer</h3>
+
+                <p>
+                    Abnormal growth of lung cells that can spread if not detected
+                    early.
+                </p>
+
+            </div>
+
+            <!-- Pulmonary Fibrosis -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/fibrosis.png') }}" alt="Pulmonary Fibrosis">
+
+                <h3>Pulmonary Fibrosis</h3>
+
+                <p>
+                    Scarring of lung tissue that reduces the lungs' ability to
+                    supply oxygen.
+                </p>
+
+            </div>
+
+            <!-- Pulmonary Edema -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/edema.png') }}" alt="Pulmonary Edema">
+
+                <h3>Pulmonary Edema</h3>
+
+                <p>
+                    Fluid buildup inside the lungs that makes breathing
+                    difficult.
+                </p>
+
+            </div>
+
+            <!-- Emphysema -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/emphysema.png') }}" alt="Emphysema">
+
+                <h3>Emphysema</h3>
+
+                <p>
+                    Damage to the air sacs of the lungs that reduces airflow and
+                    oxygen exchange.
+                </p>
+
+            </div>
+
+            <!-- Atelectasis -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/atelectasis.png') }}" alt="Atelectasis">
+
+                <h3>Atelectasis</h3>
+
+                <p>
+                    Partial or complete collapse of the lung causing reduced
+                    oxygen supply.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     STATISTICS SECTION
+===================================================== -->
+
+<section class="statistics">
+
+    <div class="container statistics-container">
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">AI Accuracy</span>
+
+                <strong>96.2%</strong>
+
+                <small>Deep Learning Model</small>
+
+            </div>
+
+        </div>
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">Prediction Time</span>
+
+                <strong>2 sec</strong>
+
+                <small>Instant Analysis</small>
+
+            </div>
+
+        </div>
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">Data Privacy</span>
+
+                <strong>100%</strong>
+
+                <small>Secure Upload</small>
+
+            </div>
+
+        </div>
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+                <i class="fa-solid fa-user-doctor"></i>
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">AI Assistance</span>
+
+                <strong>24/7</strong>
+
+                <small>Always Available</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY CHOOSE US
+===================================================== -->
+
+<section class="features-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Why Choose LungVision AI</span>
+
+            <h2>Smart Healthcare Powered by Artificial Intelligence</h2>
+
+            <p>
+
+                Our platform combines modern AI with medical imaging to provide
+                fast, reliable and intelligent lung disease detection.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <!-- Feature 1 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <h3>AI Analysis</h3>
+
+                <p>
+
+                    Advanced deep learning models analyze chest X-ray images
+                    with high precision.
+
+                </p>
+
+            </div>
+
+
+            <!-- Feature 2 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Instant Results</h3>
+
+                <p>
+
+                    Receive prediction results within seconds without long
+                    waiting times.
+
+                </p>
+
+            </div>
+
+
+            <!-- Feature 3 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-lungs"></i>
+
+                <h3>7 Lung Diseases</h3>
+
+                <p>
+
+                    Detect Tuberculosis, COVID-19, Lung Cancer,
+                    Fibrosis, Atelectasis, Emphysema and Edema.
+
+                </p>
+
+            </div>
+
+
+            <!-- Feature 4 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <h3>Detailed Report</h3>
+
+                <p>
+
+                    Generates a clear prediction report to assist
+                    doctors and patients.
+
+                </p>
+
+            </div>
+
+
+            <!-- Feature 5 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <h3>Easy Upload</h3>
+
+                <p>
+
+                    Upload chest X-ray images with a simple drag-and-drop
+                    interface.
+
+                </p>
+
+            </div>
+
+
+            <!-- Feature 6 -->
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <h3>Secure System</h3>
+
+                <p>
+
+                    Patient information and uploaded images remain
+                    protected and confidential.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-lungs"></i>
+                </div>
+
+                <div>
+
+                    <h3>LungVision AI</h3>
+
+                    <p>
+                        Intelligent Lung Disease Detection using Artificial Intelligence
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+
+    <h3>Quick Links</h3>
+<a href="{{ url_for('home') }}">Home</a>
+<a href="/predict">Predict</a>
+<a href="#diseases" class="nav-link">Diseases</a>
+<a href="/about">About</a>
+<a href="/contact">Contact</a>
+
+</div>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 LungVision AI. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+</main>
+
+<!-- =====================================================
+     VIDEO POPUP
+===================================================== -->
+
+<div id="videoModal" class="video-modal">
+
+    <div class="video-content">
+
+        <span class="close-video">&times;</span>
+
+        <video id="heroVideo" controls>
+
+            <source src="{{ url_for('static', filename='videos/lung-demo.mp4') }}" type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+
+    </div>
+
+</div>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+<!-- Demo Video Modal -->
+<div id="videoModal" class="video-modal">
+
+    <div class="video-content">
+
+        <span class="close-video">&times;</span>
+
+        <video id="demoVideo" controls>
+    <source src="{{ url_for('static', filename='videos/lung-demo.mp4') }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>

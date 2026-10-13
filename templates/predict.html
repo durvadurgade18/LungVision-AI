@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LungVision AI | Predict</title>
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/main.css') }}">
+
+    <!-- Predict CSS -->
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/predict.css') }}">
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="container navbar-container">
+
+        <a href="{{ url_for('home') }}" class="logo">
+
+            <img
+                class="logo-img"
+                src="{{ url_for('static', filename='images/logo/logo.png') }}"
+                alt="LungVision AI Logo">
+
+            <div class="logo-text">
+                <span>LungVision</span>
+                <strong>AI</strong>
+            </div>
+
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="{{ url_for('home') }}" class="nav-link">
+                Home
+            </a>
+
+            <a href="{{ url_for('predict_page') }}" class="nav-link active">
+                Predict
+            </a>
+
+            <a href="{{ url_for('assistant_page') }}" class="nav-link">
+                Assistant
+            </a>
+
+            <a href="{{ url_for('specialists') }}" class="nav-link">
+                Specialists
+            </a>
+
+            <a href="{{ url_for('about') }}" class="nav-link">
+                About
+            </a>
+
+            <a href="{{ url_for('contact') }}" class="nav-link">
+                Contact
+            </a>
+
+        </nav>
+
+        <a
+            href="{{ url_for('predict_page') }}"
+            class="get-started">
+
+            <span>Get Started</span>
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     PREDICTION HERO
+===================================================== -->
+
+<section class="predict-hero">
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="hero-heading">
+
+            <span class="badge">
+
+                <i class="fa-solid fa-brain"></i>
+
+                AI Powered Analysis
+
+            </span>
+
+            <h1>
+                Chest X-ray Disease
+                <span>Prediction</span>
+            </h1>
+
+            <p>
+                Upload a chest X-ray image and let
+                LungVision AI analyze it using our
+                deep learning model. Results are generated
+                within seconds.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             UPLOAD + PREVIEW
+        ================================================= -->
+
+        <div class="predict-grid">
+
+            <!-- Upload Card -->
+
+            <div class="upload-card">
+
+                <div
+                    id="dropArea"
+                    class="drop-area">
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept="image/*"
+                        hidden>
+
+                    <label for="fileInput">
+
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        <h3>
+                            Upload Chest X-ray
+                        </h3>
+
+                        <p>
+                            Drag & Drop or Click to Browse
+                        </p>
+
+                        <small>
+                            JPG • JPEG • PNG
+                        </small>
+
+                    </label>
+
+                </div>
+
+ <!-- Analyze Button -->
+
+                <button
+                    id="analyzeBtn"
+                    class="analyze-btn"
+                    type="button">
+
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                    Analyze Image
+
+                </button>
+         
+
+            </div>
+
+
+            <!-- Preview Card -->
+
+            <div class="preview-card">
+
+                <h2>
+
+                    <i class="fa-solid fa-image"></i>
+
+                    Image Preview
+
+                </h2>
+
+                <div class="preview-container">
+
+                    <img
+                        id="previewImage"
+                        src=""
+                        alt="X-ray Preview">
+
+                    <div
+                        id="previewPlaceholder"
+                        class="preview-placeholder">
+
+                        <i class="fa-solid fa-lungs"></i>
+
+                        <p>
+                            Your X-ray preview will appear here
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             LOADER
+        ================================================= -->
+
+        <div
+            class="loader-card"
+            id="loader">
+
+            <div class="scanner"></div>
+
+            <h3>
+                Analyzing X-ray...
+            </h3>
+
+            <p>
+                AI model is processing your image.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             RESULT CARD
+        ================================================= -->
+
+        <div
+            class="result-card"
+            id="resultCard">
+
+            <h2>
+
+                <i class="fa-solid fa-file-waveform"></i>
+
+                Prediction Result
+
+            </h2>
+
+
+            <!-- Disease -->
+
+            <div class="result-item">
+
+                <span>
+                    Disease
+                </span>
+
+                <strong id="prediction">
+                    --
+                </strong>
+
+            </div>
+
+
+            <!-- Confidence -->
+
+            <div class="result-item">
+
+                <span>
+                    Confidence
+                </span>
+
+                <strong id="accuracy">
+                    --
+                </strong>
+
+            </div>
+
+
+            <!-- Status -->
+
+            <div class="result-item">
+
+                <span>
+                    Status
+                </span>
+
+                <strong id="status">
+                    Waiting
+                </strong>
+
+            </div>
+
+
+            <!-- Analysis Time -->
+
+           <div class="result-item">
+                <span>Analysis Time</span>
+                <strong id="timeTaken">--</strong>
+            </div>
+
+           <!-- Precautions Card with Language Tabs -->
+            <div class="precautions-card" id="precautionsCard" style="display:none;">
+
+                <div class="precautions-header">
+                    <h3>
+                        <i class="fa-solid fa-house-medical"></i>
+                        Home Care Precautions
+                    </h3>
+
+                    <button id="speakBtn" class="speak-btn">
+                        <i class="fa-solid fa-volume-high"></i>
+                        Listen
+                    </button>
+                </div>
+
+               <!-- NEW: Language Tabs -->
+                <div class="language-tabs">
+                    <button class="lang-tab active" data-lang="en">English</button>
+                    <button class="lang-tab" data-lang="mr">मराठी</button>
+                    <button class="lang-tab" data-lang="hi">हिंदी</button>
+                </div>
+
+                <p class="precautions-disclaimer" id="precautionsDisclaimer">
+                    General home-care tips only — not a substitute for medical treatment.
+                </p>
+
+                <ul id="precautionsList"></ul>
+
+            </div>
+
+
+            <!-- =================================================
+                 PDF REPORT BUTTON
+            ================================================= -->
+
+            <button
+                id="generateReportBtn"
+                class="action-btn pdf-btn"
+                style="display: none;"
+                type="button">
+
+                <i class="fa-solid fa-file-pdf"></i>
+
+                Generate PDF Report
+
+            </button>
+
+
+           <button
+    id="btnHeatmap"
+    class="action-btn heatmap-btn"
+    type="button">
+
+    <i class="fa-solid fa-fire"></i>
+    Generate Heatmap
+
+</button>
+
+            <!-- =================================================
+                 COUPON BUTTON
+                 Only shown when confidence > 85%
+            ================================================= -->
+
+            <a
+                href="{{ url_for('coupon') }}"
+                id="generateCouponBtn"
+                class="action-btn coupon-btn"
+                style="display: none;">
+
+                <i class="fa-solid fa-ticket"></i>
+
+                Generate LungVision AI Coupon
+
+            </a>
+
+
+            <!-- =================================================
+                 RESET BUTTON
+            ================================================= -->
+
+            <button
+                id="resetBtn"
+                class="again-btn"
+                type="button">
+
+                <i class="fa-solid fa-rotate-left"></i>
+
+                Analyze Another Image
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PDF LIBRARY
+===================================================== -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js">
+</script>
+
+
+<!-- =====================================================
+     REPORT JS
+===================================================== -->
+
+<script
+    src="{{ url_for('static', filename='js/report.js') }}">
+</script>
+
+
+<!-- =====================================================
+     PREDICTION JS
+===================================================== -->
+
+<script
+    src="{{ url_for('static', filename='js/predict.js') }}">
+</script>
+
+
+</body>
+
+</html>

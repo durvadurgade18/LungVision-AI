@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LungVision AI</title>
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/heatmap.css') }}">
+</head>
+<body>
+
+
+
+<!-- VIEW 2: Grad-CAM Heatmap -->
+<section id="view-heatmap" class="view active">
+  <main>
+    <div class="top-row">
+      <div>
+        <h1>AI Explainability (Grad-CAM Heatmap)</h1>
+        <p class="subtitle">The highlighted regions show which areas influenced the AI prediction.</p>
+      </div>
+      <div class="info-card">
+        <div class="label-row"><span class="icon-badge">📄</span> Prediction Info</div>
+        <div class="info-line">Disease: <b id="diseaseValue">{{ disease }}</b><span class="sep">|</span> Confidence: <b id="confidenceValue">{{ confidence }}%</b></div>
+        <div class="info-line">Analysis Time: <b>3.02 sec</b><span class="sep">|</span> Status: <span class="status-ok">Analysis Complete</span></div>
+      </div>
+    </div>
+
+    <div class="panels">
+      <div class="panel">
+        <h3>Original X-ray</h3>
+        <div class="imgwrap">
+          <span class="r-tag">R</span>
+          <img id="originalImg" src="" alt="Original X-ray">
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Heatmap</h3>
+        <div class="imgwrap">
+          <span class="r-tag">R</span>
+          <img id="heatmapImg" src="" alt="Grad-CAM heatmap">
+        </div>
+      </div>
+
+      <div class="panel overlay">
+        <h3>Overlay (Original + Heatmap)</h3>
+        <div class="imgwrap">
+          <span class="r-tag">R</span>
+          <img id="overlayImg" src="" alt="Overlay of original and heatmap">
+        </div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <span class="dot red"></span>
+        <div><b>High Attention</b><p>Regions strongly influencing the AI prediction</p></div>
+      </div>
+      <div class="legend-item">
+        <span class="dot yellow"></span>
+        <div><b>Medium Attention</b><p>Regions moderately influencing the prediction</p></div>
+      </div>
+      <div class="legend-item">
+        <span class="dot blue"></span>
+        <div><b>Low Attention</b><p>Regions with least influence</p></div>
+      </div>
+    </div>
+
+    <div class="explain">
+      <div class="explain-left">
+        <div class="bulb">💡</div>
+        <div>
+          <h4>What does this mean?</h4>
+          <p>Grad-CAM helps us understand which parts of the X-ray the AI model focuses on while making the prediction. The red and yellow regions indicate important areas that contributed the most to the final result.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="back-btn-wrap">
+      <button class="back-btn" id="btnBack">← Back to Prediction</button>
+    </div>
+  </main>
+</section>
+
+
+
+<script src="{{ url_for('static', filename='js/heatmap.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/appointment.css') }}">
+</head>
+<body class="appointment-page">
+
+    <header class="navbar">
+
+    <div class="container navbar-container">
+
+        <a href="{{ url_for('home') }}" class="logo">
+
+    <img class="logo-img"
+         src="{{ url_for('static', filename='images/logo/logo.png') }}"
+         alt="Logo">
+
+    <div class="logo-text">
+        <span>LungVision</span>
+        <strong>AI</strong>
+    </div>
+
+</a>
+
+        <nav class="nav-menu">
+
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('predict_page') }}" class="nav-link">Predict</a>
+            <a href="{{ url_for('assistant_page') }}" class="nav-link">Assistant</a>
+            <a href="{{ url_for('specialists') }}" class="nav-link">Specialists</a>
+            <a href="{{ url_for('about') }}" class="nav-link">About</a>
+            <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+    <section class="appointment-section">
+
+        <div class="card appointment-card">
+
+            <h1>Book Appointment</h1>
+
+            <form id="appointment-form"
+      action="{{ url_for('appointment') }}"
+      method="POST"
+      enctype="multipart/form-data">
+
+    <input
+        type="text"
+        name="patient_name"
+        placeholder="Patient Name"
+        required>
+
+    <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Enter the 10 digit Phone Number"
+        maxlength="10"
+        minlength="10"
+        pattern="[0-9]{10}"
+        required>
+
+    <select name="disease" required>
+        <option value="">Select Disease</option>
+        <option>Tuberculosis</option>
+        <option>COVID-19</option>
+        <option>Lung Cancer</option>
+        <option>Pulmonary Fibrosis</option>
+        <option>Emphysema</option>
+        <option>Atelectasis</option>
+        <option>Pulmonary Edema</option>
+    </select>
+
+    <select name="doctor" required>
+        <option value="">Select Doctor</option>
+        <option>Dr. Raj Sharma</option>
+        <option>Dr. Priya Patel</option>
+        <option>Dr. Amit Verma</option>
+        <option>Dr. Sarah Wilson</option>
+        <option>Dr. David Lee</option>
+        <option>Dr. Emily Johnson</option>
+        <option>Dr. Rani Mehta</option>
+    </select>
+
+    <input
+        type="date"
+        name="appointment_date"
+        required>
+
+    <input
+        type="time"
+        name="appointment_time"
+        required>
+
+    <textarea
+        name="symptoms"
+        rows="5"
+        placeholder="Describe Your Symptoms"></textarea>
+
+    <!-- NEW: PDF Report Upload -->
+    <div class="upload-report">
+        <label for="reportFile">Upload Prediction Report (PDF)</label>
+        <input
+            type="file"
+            name="report"
+            id="reportFile"
+            accept="application/pdf">
+    </div>
+
+    <button type="submit" class="btn">
+        Book Appointment
+    </button>
+
+</form>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 LungVision AI
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/appointment.js') }}"></script>
+
+<script>
+    // Read doctor & disease from the URL (sent from the Specialists page)
+    // and automatically select them in the form dropdowns
+    const params = new URLSearchParams(window.location.search);
+    const doctorParam = params.get("doctor");
+    const diseaseParam = params.get("disease");
+
+    if (doctorParam) {
+        document.querySelector('select[name="doctor"]').value = doctorParam;
+    }
+
+    if (diseaseParam) {
+        document.querySelector('select[name="disease"]').value = diseaseParam;
+    }
+</script>
+
+</body>
+</html>

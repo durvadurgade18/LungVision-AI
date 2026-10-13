@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}">
+
+    
+</head>
+<body>
+
+    <header class="navbar">
+
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/logo/logo.png') }}" alt="Logo">
+        <h2>LungVision <span>AI</span></h2>
+    </div>
+
+    <nav class="nav-menu">
+        <a href="/home" class="nav-link">Home</a>
+        <a href="/login" class="nav-link">Login</a>
+        <a href="/specialists" class="nav-link">Specialists</a>
+    </nav>
+
+</header>   <!-- You were missing this -->
+
+    <section class="register-section">
+
+        <div class="card register-card">
+
+            <h1>Create Account</h1>
+
+            <form action="/register" method="POST">
+
+    <input
+        type="text"
+        name="fullname"
+        placeholder="Full Name"
+        required>
+
+    <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
+
+  <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Enter the 10 digit Phone Number"
+        maxlength="10"
+        minlength="10"
+        pattern="[0-9]{10}"
+        required>
+
+    <input
+        type="password"
+        name="password"
+        placeholder="Create Password"
+        required>
+
+    <input
+        type="password"
+        name="confirm_password"
+        placeholder="Confirm Password"
+        required>
+
+    <button type="submit" class="btn">
+        Register
+    </button>
+
+</form>
+
+            <p class="register-link">
+                Already have an account?
+                <a href="{{ url_for('login_page') }}">
+                    Login
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 LungVision AI
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+
+</body>
+</html>

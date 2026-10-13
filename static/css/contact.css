@@ -1,0 +1,1143 @@
+/* ======================================================
+        LUNGVISION AI - CONTACT PAGE
+        PART 1
+====================================================== */
+
+/* Google Font */
+
+
+
+
+
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body {
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.8),
+        rgba(0,0,0,0.8)
+    ),
+    url("../images/background.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+}
+
+
+
+
+
+
+
+
+/* ======================================================
+        HERO SECTION
+====================================================== */
+
+.contact-hero{
+    width:100%;
+    padding:220px 20px 100px;
+    text-align:center;
+
+    background:
+        linear-gradient(
+            rgba(6,22,48,.55),
+            rgba(6,22,48,.75)
+        ),
+        url("../images/backgrounds/hero-bg.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+.contact-hero h4{
+
+    color:#00d9ff;
+
+    font-size:15px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.contact-hero h1{
+
+    font-size:58px;
+
+    
+
+    color:white;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+        0 0 15px rgba(255,255,255,.20),
+
+        0 0 40px rgba(0,217,255,.15);
+
+}
+
+.contact-hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#d8e5ff;
+
+    font-size:18px;
+
+}
+
+
+/* ======================================================
+        CONTACT INFO
+====================================================== */
+
+.contact-info{
+
+    width:100%;
+
+    padding:45px 8%;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.info-card{
+
+    background:rgba(16,40,75,.55);
+
+    backdrop-filter:blur(15px);
+
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(0,217,255,.25);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:
+
+        0 10px 30px rgba(0,0,0,.25),
+
+        0 0 18px rgba(0,217,255,.08);
+
+}
+
+.info-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#00d9ff;
+
+    box-shadow:
+
+        0 0 30px rgba(0,217,255,.30),
+
+        0 0 60px rgba(0,217,255,.12);
+
+}
+
+.info-card i{
+
+    font-size:46px;
+
+    color:#00d9ff;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+        0 0 12px rgba(0,217,255,.70);
+
+}
+
+.info-card h3{
+
+    font-size:28px;
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+.info-card p{
+
+    color:#d7e3f5;
+
+    font-size:16px;
+
+    margin-bottom:8px;
+
+}
+
+.info-card span{
+
+    display:block;
+
+    margin-top:12px;
+
+    color:#00d9ff;
+
+    font-weight:600;
+
+}
+/* ======================================================
+        CONTACT FORM SECTION
+        PART 2
+====================================================== */
+
+.contact-container{
+
+    width:100%;
+
+    padding:40px 8% 60px;
+
+    display:grid;
+
+    grid-template-columns:1.35fr .9fr;
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+
+/* ======================================================
+        CONTACT FORM
+====================================================== */
+
+.contact-form-box{
+
+    background:rgba(16,40,75,.55);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(0,217,255,.25);
+
+    border-radius:24px;
+
+    padding:40px;
+
+    box-shadow:
+
+        0 10px 35px rgba(0,0,0,.30),
+
+        0 0 20px rgba(0,217,255,.08);
+
+    transition:.4s;
+
+}
+
+.contact-form-box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 0 30px rgba(0,217,255,.20),
+
+        0 0 60px rgba(0,217,255,.08);
+
+}
+
+.contact-form-box h2{
+
+    font-size:34px;
+
+    margin-bottom:12px;
+
+    color:white;
+
+}
+
+.contact-form-box p{
+
+    color:#d6e3ff;
+
+    margin-bottom:28px;
+
+}
+
+
+/* ======================================================
+        INPUT ROW
+====================================================== */
+
+.input-group{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ======================================================
+        INPUTS
+====================================================== */
+
+.contact-form-box input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(0,217,255,.18);
+
+    border-radius:14px;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+    transition:.35s;
+
+}
+
+.contact-form-box input::placeholder{
+
+    color:#bfd2f3;
+
+}
+
+.contact-form-box input:focus{
+
+    border-color:#00d9ff;
+
+    background:rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 18px rgba(0,217,255,.25);
+
+}
+
+
+/* ======================================================
+        TEXTAREA
+====================================================== */
+
+.contact-form-box textarea{
+
+    width:100%;
+
+    resize:none;
+
+    padding:18px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(0,217,255,.18);
+
+    border-radius:14px;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+    transition:.35s;
+
+}
+
+.contact-form-box textarea::placeholder{
+
+    color:#bfd2f3;
+
+}
+
+.contact-form-box textarea:focus{
+
+    border-color:#00d9ff;
+
+    background:rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 0 20px rgba(0,217,255,.25);
+
+}
+
+
+/* ======================================================
+        BUTTON
+====================================================== */
+
+.contact-form-box button{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #00d9ff,
+
+        #009dff
+
+    );
+
+    color:white;
+
+    border:none;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 0 20px rgba(0,217,255,.25);
+
+}
+
+.contact-form-box button i{
+
+    margin-right:8px;
+
+}
+
+.contact-form-box button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 0 25px rgba(0,217,255,.45),
+
+        0 0 55px rgba(0,217,255,.20);
+
+}
+
+
+/* ======================================================
+        SIDE INFORMATION CARD
+====================================================== */
+
+.contact-side-card{
+
+    background:rgba(16,40,75,.55);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(0,217,255,.25);
+
+    border-radius:24px;
+
+    padding:38px 30px;
+
+    box-shadow:
+
+        0 10px 35px rgba(0,0,0,.30);
+
+    transition:.4s;
+
+}
+
+.contact-side-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+        0 0 30px rgba(0,217,255,.20);
+
+}
+
+
+/* ======================================================
+        LUNGS ICON
+====================================================== */
+
+.circle-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #00d9ff,
+
+        #0078ff
+
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+    box-shadow:
+
+        0 0 30px rgba(0,217,255,.45);
+
+}
+
+.circle-icon i{
+
+    color:white;
+
+    font-size:40px;
+
+}
+
+
+/* ======================================================
+        SIDE TEXT
+====================================================== */
+
+.contact-side-card h2{
+
+    text-align:center;
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+}
+
+.contact-side-card p{
+
+    text-align:center;
+
+    color:#d6e3ff;
+
+    margin-bottom:28px;
+
+}
+
+
+/* ======================================================
+        FEATURES
+====================================================== */
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:14px 18px;
+
+    margin-bottom:15px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:14px;
+
+    transition:.35s;
+
+}
+
+.feature:hover{
+
+    background:rgba(0,217,255,.10);
+
+    transform:translateX(6px);
+
+}
+
+.feature i{
+
+    color:#00d9ff;
+
+    font-size:18px;
+
+}
+
+.feature span{
+
+    color:white;
+
+    font-size:16px;
+
+}
+/* ======================================================
+        FAQ SECTION
+        PART 3
+====================================================== */
+
+.faq-section{
+
+    width:100%;
+
+    padding:50px 8% 60px;
+
+}
+
+.faq-section h4{
+
+    text-align:center;
+
+    color:#00d9ff;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+}
+
+.faq-section h2{
+
+    text-align:center;
+
+    font-size:46px;
+
+    color:white;
+
+    margin-bottom:40px;
+
+    text-shadow:
+        0 0 15px rgba(0,217,255,.15);
+
+}
+
+.faq-box{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+/* ======================================================
+        FAQ CARD
+====================================================== */
+
+.faq-box details{
+
+    background:rgba(16,40,75,.55);
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+
+    border:1px solid rgba(0,217,255,.22);
+
+    border-radius:18px;
+
+    margin-bottom:18px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.faq-box details:hover{
+
+    border-color:#00d9ff;
+
+    box-shadow:
+
+        0 0 30px rgba(0,217,255,.20);
+
+}
+
+
+/* ======================================================
+        FAQ SUMMARY
+====================================================== */
+
+.faq-box summary{
+
+    list-style:none;
+
+    cursor:pointer;
+
+    padding:20px 25px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    color:white;
+
+    position:relative;
+
+}
+
+.faq-box summary::-webkit-details-marker{
+
+    display:none;
+
+}
+
+.faq-box summary::after{
+
+    content:"+";
+
+    position:absolute;
+
+    right:25px;
+
+    top:18px;
+
+    color:#00d9ff;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+.faq-box details[open] summary::after{
+
+    content:"−";
+
+}
+
+.faq-box p{
+
+    padding:0 25px 22px;
+
+    color:#d5e2f5;
+
+    line-height:1.8;
+
+}
+
+
+
+
+/* ======================================================
+        RESPONSIVE DESIGN
+====================================================== */
+
+@media(max-width:1100px){
+
+    .contact-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-side-card{
+
+        margin-top:25px;
+
+    }
+
+
+}
+
+@media(max-width:768px){
+
+    
+
+    .contact-hero{
+
+        padding:120px 6% 50px;
+
+    }
+
+    .contact-hero h1{
+
+        font-size:42px;
+
+    }
+
+    .contact-hero p{
+
+        font-size:16px;
+
+    }
+
+    .contact-info{
+
+        padding:35px 6%;
+
+    }
+
+    .contact-container{
+
+        padding:30px 6% 50px;
+
+    }
+
+    .input-group{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-form-box{
+
+        padding:30px;
+
+    }
+
+    .contact-side-card{
+
+        padding:30px;
+
+    }
+
+    .faq-section{
+
+        padding:45px 6%;
+
+    }
+
+    .faq-section h2{
+
+        font-size:34px;
+
+    }
+
+    
+
+}
+
+@media(max-width:500px){
+
+    
+
+    
+
+    .contact-hero h1{
+
+        font-size:34px;
+
+    }
+
+    .contact-form-box h2{
+
+        font-size:28px;
+
+    }
+
+    .contact-side-card h2{
+
+        font-size:28px;
+
+    }
+
+    .feature{
+
+        padding:12px;
+
+    }
+
+    
+
+}
+
+
+/* ======================================================
+        ANIMATIONS
+====================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+.contact-hero{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.contact-info{
+
+    animation:fadeUp 1s ease;
+
+}
+
+.contact-container{
+
+    animation:fadeUp 1.2s ease;
+
+}
+
+.faq-section{
+
+    animation:fadeUp 1.4s ease;
+
+}
+
+.footer{
+
+    animation:fadeUp 1.6s ease;
+
+}
+
+
+/* Floating Lung Icon */
+
+.circle-icon{
+
+    animation:floating 3s ease-in-out infinite;
+
+}
+
+
+/* ======================================================
+        PREMIUM GLOW
+====================================================== */
+
+.contact-form-box:hover,
+.contact-side-card:hover,
+.info-card:hover,
+.faq-box details:hover{
+
+    box-shadow:
+        0 0 30px rgba(0,217,255,.18),
+        0 0 60px rgba(0,217,255,.08);
+
+}
+
+
+/* ======================================================
+        IMAGE ENHANCEMENT
+====================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(circle at top right,
+
+        rgba(0,217,255,.10),
+
+        transparent 45%),
+
+        radial-gradient(circle at bottom left,
+
+        rgba(0,120,255,.10),
+
+        transparent 40%);
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+
+/* ======================================================
+        TEXT GLOW
+====================================================== */
+
+.contact-hero h1,
+.footer h2{
+
+    text-shadow:
+
+        0 0 10px rgba(255,255,255,.20),
+
+        0 0 25px rgba(0,217,255,.15);
+
+}
+
+.info-card h3,
+.contact-form-box h2,
+.contact-side-card h2{
+
+    text-shadow:
+
+        0 0 10px rgba(0,217,255,.10);
+
+}
+
+
+/* ======================================================
+        BUTTON GLOW
+====================================================== */
+
+.contact-form-box button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.contact-form-box button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+    transition:.8s;
+
+}
+
+.contact-form-box button:hover::before{
+
+    left:100%;
+
+}
+
+
+/* ======================================================
+        INPUT PLACEHOLDER
+====================================================== */
+
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder{
+
+    color:#b8c8e6;
+
+}
+
+
+/* ======================================================
+        SELECTION
+====================================================== */
+
+::selection{
+
+    background:#00d9ff;
+
+    color:#07162f;
+
+}
+
+.success-message{
+    background:#16a34a;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:20px;
+    text-align:center;
+    font-weight:600;
+}

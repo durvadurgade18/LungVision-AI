@@ -1,0 +1,117 @@
+.specialist-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+
+.specialist-card{
+    padding:30px;
+    text-align:center;
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.specialist-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,217,255,0.5);
+}
+
+.specialist-card img{
+    width:150px;
+    height:150px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #00D9FF;
+    margin-bottom:20px;
+    transition:0.4s;
+}
+
+.specialist-card:hover img{
+    transform:scale(1.05);
+}
+
+.specialist-card h2{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.specialist-card p{
+    margin:8px 0;
+}
+
+.specialist-card .btn{
+    margin-top:20px;
+    width:100%;
+}
+
+.specialist-card::before{
+    content:"";
+    position:absolute;
+    top:-100%;
+    left:-100%;
+    width:200%;
+    height:200%;
+    background:
+        linear-gradient(
+            45deg,
+            transparent,
+            rgba(0,217,255,0.1),
+            transparent
+        );
+    transform:rotate(25deg);
+    transition:0.8s;
+}
+
+.specialist-card:hover::before{
+    top:100%;
+    left:100%;
+}
+
+section h1{
+    text-align:center;
+    margin-bottom:10px;
+}
+
+section > p{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+@media(max-width:768px){
+
+    .specialist-container{
+        grid-template-columns:1fr;
+    }
+
+    .specialist-card img{
+        width:120px;
+        height:120px;
+    }
+
+    .specialist-card h2{
+        font-size:20px;
+    }
+
+}
+
+.specialist-page{
+    background-image:url("../images/backgrounds/hero-bg.png");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.specialist-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    z-index:-1;
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | LungVision AI</title>
+
+    <!-- Contact CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+                        NAVBAR
+====================================================== -->
+
+
+    <header class="navbar">
+
+    <div class="container navbar-container">
+
+        <a href="{{ url_for('home') }}" class="logo">
+
+            <div class="logo-text">
+                <span>LungVision</span>
+                <strong>AI</strong>
+            </div>
+
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('predict_page') }}" class="nav-link">Predict</a>
+            <a href="{{ url_for('assistant_page') }}" class="nav-link">Assistant</a>
+            <a href="{{ url_for('specialists') }}" class="nav-link">Specialists</a>
+            <a href="{{ url_for('about') }}" class="nav-link">About</a>
+            <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+
+        </nav>
+
+        <a href="{{ url_for('predict_page') }}" class="get-started">
+
+            <span>Get Started</span>
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+                    HERO SECTION
+====================================================== -->
+
+<section class="contact-hero">
+
+    <h4>CONTACT OUR TEAM</h4>
+
+    <h1>Let's Connect</h1>
+
+    <p>
+
+        Have questions about LungVision AI?
+
+        Whether you need assistance with lung disease
+        prediction, technical support, or project-related
+        guidance, our team is always ready to help you.
+
+        We look forward to hearing from you.
+
+    </p>
+
+</section>
+
+<!-- =====================================================
+                CONTACT INFORMATION
+====================================================== -->
+
+<section class="contact-info">
+
+    <!-- Address -->
+
+    <div class="info-card">
+
+        <i class="fa-solid fa-location-dot"></i>
+
+        <h3>Visit Us</h3>
+
+        <p>
+
+            Pune,<br>
+
+            Maharashtra,<br>
+
+            India
+
+        </p>
+
+        <span>AI Healthcare Research</span>
+
+    </div>
+
+    <!-- Email -->
+
+    <div class="info-card">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <h3>Email Us</h3>
+
+        <p>
+
+            contact@lungvision.ai
+
+        </p>
+
+        <span>Reply Within 24 Hours</span>
+
+    </div>
+
+    <!-- Phone -->
+
+    <div class="info-card">
+
+        <i class="fa-solid fa-phone"></i>
+
+        <h3>Call Us</h3>
+
+        <p>
+
+            +91 98765 43210
+
+        </p>
+
+        <span>Monday – Saturday<br>9:00 AM – 6:00 PM</span>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+      PART 2 STARTS FROM HERE
+====================================================== -->
+<!-- =====================================================
+                CONTACT FORM SECTION
+====================================================== -->
+
+<section class="contact-container">
+
+    <!-- ================= LEFT SIDE ================= -->
+
+    <div class="contact-form-box">
+
+        <h2>Send Us A Message</h2>
+
+        <p>
+
+            We'd love to hear from you. Fill out the form below,
+            and our team will get back to you as soon as possible.
+
+        </p>
+
+        <form action="/submit_contact" method="POST">
+
+           
+
+
+
+
+
+    <div class="input-group">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your full name"
+            required>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            required>
+
+    </div>
+
+    <div class="input-group">
+
+       <input
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Enter the 10 digit Phone Number"
+        maxlength="10"
+        minlength="10"
+        pattern="[0-9]{10}"
+        required>
+
+        <input
+            type="text"
+            name="subject"
+            placeholder="Subject">
+
+    </div>
+
+    <textarea
+        name="message"
+        rows="8"
+        placeholder="Write your message here..."
+        required></textarea>
+
+    <button type="submit">
+
+        <i class="fa-solid fa-paper-plane"></i>
+
+        Send Secure Message
+
+    </button>
+
+</form>
+    </div>
+
+
+
+    <!-- ================= RIGHT SIDE ================= -->
+
+    <div class="contact-side-card">
+
+        <div class="circle-icon">
+
+            <i class="fa-solid fa-lungs"></i>
+
+        </div>
+
+        <h2>LungVision AI</h2>
+
+        <p>
+
+            An AI-powered healthcare platform designed
+            to assist in early lung disease detection
+            using advanced deep learning algorithms and
+            chest X-ray image analysis.
+
+        </p>
+
+
+
+        <div class="feature">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <span>AI-Based Diagnosis</span>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <span>Deep Learning Model</span>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-lungs"></i>
+
+            <span>Detects 7 Lung Diseases</span>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <span>Fast & Accurate Prediction</span>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <span>Secure X-ray Upload</span>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-file-medical"></i>
+
+            <span>Detailed AI Analysis Report</span>
+
+        </div>
+
+        <div class="feature">
+
+            <i class="fa-solid fa-headset"></i>
+
+            <span>24 × 7 Technical Support</span>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================================
+                    FAQ SECTION
+====================================================== -->
+
+<section class="faq-section">
+
+    <h4>FREQUENTLY ASKED QUESTIONS</h4>
+
+    <h2>Need Help?</h2>
+
+    <div class="faq-box">
+
+        <details>
+
+            <summary>
+                Which lung diseases can LungVision AI detect?
+            </summary>
+
+            <p>
+                LungVision AI is trained to detect seven major lung
+                diseases including Tuberculosis, COVID-19,
+                Lung Cancer, Pulmonary Fibrosis,
+                Pulmonary Edema, Atelectasis,
+                and Emphysema using chest X-ray images.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+                How accurate are the AI predictions?
+            </summary>
+
+            <p>
+                The prediction accuracy depends on the quality
+                of the uploaded chest X-ray. Our deep learning
+                model has been trained on thousands of medical
+                images to provide highly reliable results.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+                Are my uploaded X-ray images secure?
+            </summary>
+
+            <p>
+                Yes. Your uploaded X-ray images are processed
+                securely and are used only for disease prediction.
+                We prioritize user privacy and data security.
+            </p>
+
+        </details>
+
+        <details>
+
+            <summary>
+                How long does prediction take?
+            </summary>
+
+            <p>
+                Prediction is usually completed within a few
+                seconds after uploading the chest X-ray image.
+            </p>
+
+        </details>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+            CALL TO ACTION SECTION
+====================================================== -->
+
+<section class="contact-hero">
+
+    <h4>READY TO EXPERIENCE AI?</h4>
+
+    <h1>Start Your Lung Disease Analysis Today</h1>
+
+    <p>
+
+        Upload your chest X-ray and receive an AI-powered
+        prediction within seconds using our advanced
+        deep learning model.
+
+    </p>
+
+</section>
+
+<!-- =====================================================
+                    FOOTER
+====================================================== -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <!-- About -->
+
+       <div class="footer-logo">
+
+            <h2>LungVision AI</h2>
+
+            <p>
+
+                LungVision AI is an intelligent healthcare platform
+                that uses Artificial Intelligence and Deep Learning
+                to assist in the early detection of lung diseases
+                from chest X-ray images.
+
+            </p>
+
+        </div>
+
+        <!-- Social -->
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 LungVision AI | AI Powered Lung Disease Detection
+
+    </div>
+
+</footer>
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    Swal.fire({
+        icon: "success",
+        title: "Message Sent!",
+        text: "Thank you for contacting LungVision AI. We'll get back to you soon.",
+        confirmButtonColor: "#00bfff",
+        background: "#1e293b",
+        color: "#ffffff"
+    });
+});
+</script>
+{% endif %}
+{% endwith %}
+</body>
+
+</html>

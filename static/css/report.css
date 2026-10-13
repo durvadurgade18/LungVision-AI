@@ -1,0 +1,187 @@
+/*
+  report.css
+  ------------------------------------------------------------------
+  Styles for the #report block only (report.html).
+  Link this alongside your existing stylesheet:
+    <link rel="stylesheet" href="report.css">
+  ------------------------------------------------------------------
+*/
+
+:root {
+  --navy: #0a2a6e;
+  --blue: #1450c9;
+  --blue-light: #e9f0ff;
+  --red: #d92b2b;
+  --green: #1a9c5a;
+  --gray-text: #4a5568;
+  --border: #dbe3f3;
+}
+
+#report {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, .08);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #1a1a2e;
+}
+
+/* HEADER */
+#report .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 30px;
+  border-bottom: 4px solid var(--navy);
+  background: linear-gradient(90deg, #fff 60%, var(--navy) 60%);
+}
+#report .brand { display: flex; align-items: center; gap: 14px; }
+#report .brand-icon {
+  width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--blue);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 26px; color: var(--blue);
+}
+#report .brand-name h1 { margin: 0; font-size: 26px; color: var(--navy); letter-spacing: .5px; }
+#report .brand-name p { margin: 2px 0 0; font-size: 12px; letter-spacing: 1px; color: #3a4a63; font-weight: 600; }
+#report .header-right { color: #fff; font-size: 22px; padding-right: 6px; }
+
+/* SECTIONS */
+#report .section { padding: 18px 30px; }
+#report .section-title {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 15px; font-weight: 700; color: var(--navy);
+  margin-bottom: 12px; text-transform: uppercase; letter-spacing: .4px;
+}
+#report .section-title .dot {
+  width: 20px; height: 20px; border-radius: 5px; background: var(--blue-light);
+  display: inline-flex; align-items: center; justify-content: center; font-size: 12px;
+}
+
+/* REPORT INFORMATION */
+#report .info-grid { display: flex; gap: 24px; flex-wrap: wrap; }
+
+/* =========================================================
+   REPORT INFORMATION + X-RAY
+   ========================================================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1.65fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+    width: 100%;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table td {
+    border: 1px solid #cbd7e6;
+    padding: 10px 12px;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.info-table td:first-child {
+    width: 35%;
+    background: #f4f7fb;
+    color: #26384d;
+    font-weight: 600;
+}
+
+.info-table td:last-child {
+    background: #ffffff;
+    color: #202b38;
+}
+
+/* X-RAY BOX */
+
+.xray-box {
+    border: 1.5px solid #b8cde8;
+    border-radius: 12px;
+    background: #f7faff;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.xray-box::before {
+    content: "UPLOADED CHEST X-RAY";
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: #123b78;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.xray-box img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border: 1px solid #9db8d8;
+    border-radius: 10px;
+    background: #000;
+}
+
+#report .info-table { flex: 1; min-width: 280px; border-collapse: collapse; width: 100%; }
+#report .info-table td { padding: 10px 12px; border: 1px solid var(--border); font-size: 13.5px; }
+#report .info-table td:first-child { color: var(--gray-text); width: 38%; background: #f8faff; }
+#report .predicted-disease { color: var(--red); font-weight: 800; font-size: 15px; }
+#report .confidence-val { color: var(--blue); font-weight: 800; font-size: 15px; }
+#report .status-ok { color: var(--green); font-weight: 700; }
+#report .xray-box { flex: 1; min-width: 220px; }
+#report .xray-box img { width: 100%; border-radius: 6px; border: 1px solid var(--border); display: block; }
+
+/* AI PREDICTION SUMMARY */
+#report .summary-strip {
+  display: flex; justify-content: space-between; gap: 10px;
+  background: #f5f8ff; border: 1px solid var(--border); border-radius: 8px;
+  padding: 20px 10px; flex-wrap: wrap;
+}
+#report .summary-item { text-align: center; flex: 1; min-width: 120px; }
+#report .summary-icon {
+  width: 46px; height: 46px; border-radius: 50%; margin: 0 auto 8px;
+  display: flex; align-items: center; justify-content: center; color: #fff; font-size: 20px;
+}
+#report .summary-item .label { font-size: 12px; color: var(--gray-text); margin-bottom: 2px; }
+#report .summary-item .value { font-size: 13.5px; font-weight: 700; }
+
+/* DISCLAIMER + SYSTEM INFO */
+#report .disclaimer {
+  background: #fff5f5; border: 1px solid #f3c8c8; border-radius: 8px;
+  padding: 16px 20px; font-size: 12.5px; color: #5a3a3a; line-height: 1.5;
+}
+#report .disclaimer-title { color: var(--red); font-weight: 700; margin-bottom: 6px; font-size: 14px; }
+#report .sys-table { width: 100%; border-collapse: collapse; }
+#report .sys-table td { padding: 8px 10px; border: 1px solid var(--border); font-size: 12.5px; }
+#report .sys-table td:first-child { background: #f8faff; font-weight: 600; width: 45%; }
+#report .two-col { display: flex; gap: 20px; flex-wrap: wrap; }
+#report .two-col > div { flex: 1; min-width: 280px; }
+
+/* AUTHENTICATION STRIP */
+#report .auth-strip {
+  display: flex; justify-content: space-around; flex-wrap: wrap; gap: 14px;
+  background: #f4fbf6; border: 1px solid #cdeedc; border-radius: 8px;
+  padding: 16px; margin: 0 30px 20px; font-size: 12.5px;
+}
+#report .auth-item { text-align: center; }
+#report .auth-item .value { font-weight: 700; margin-top: 2px; }
+
+/* FOOTER */
+#report .footer {
+  background: var(--navy); color: #fff; padding: 16px 30px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; flex-wrap: wrap; gap: 10px;
+}
+#report .footer strong { display: block; font-size: 14px; }

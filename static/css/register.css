@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:
+    linear-gradient(rgba(6,18,40,.6),rgba(6,18,40,.7)),
+    url("../images/backgrounds/hero-bg.png");
+
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    color:white;
+
+}
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(6,15,30,.75);
+
+    backdrop-filter:blur(18px);
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.logo img{
+
+    width:55px;
+
+}
+
+.logo h2{
+
+    color:white;
+
+}
+
+.logo span{
+
+    color:#25b8ff;
+
+}
+
+.nav-menu{
+
+    display:flex;
+    gap:30px;
+
+}
+
+.nav-link{
+
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:#25b8ff;
+
+}
+
+.register-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+}
+
+.register-card{
+    width:600px;
+    padding:40px;
+}
+
+.register-card h1{
+    text-align:center;
+    color:#00D9FF;
+    margin-bottom:30px;
+}
+
+.register-card form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.register-card .btn{
+    width:100%;
+    margin-top:10px;
+}
+
+.register-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.register-link a{
+    color:#00D9FF;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.register-link a:hover{
+    text-decoration:underline;
+}
+
+.register-card:hover{
+    box-shadow:0 0 35px rgba(0,217,255,0.4);
+    transition:0.4s;
+}
+
+@media(max-width:768px){
+
+    .register-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .register-card h1{
+        font-size:32px;
+    }
+
+}
+
+.card{
+
+    background:rgba(17,28,45,.8);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.3);
+
+}
+
+input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#10263f;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+.btn{
+
+    border:none;
+
+    padding:16px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:18px;
+
+    background:linear-gradient(135deg,#25b8ff,#006eff);
+
+}
+
+footer{
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#b6cce8;
+
+}

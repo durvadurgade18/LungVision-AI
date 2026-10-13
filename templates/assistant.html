@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LungVision AI | AI Assistant</title>
+
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/assistant.css') }}">
+      <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="container navbar-container">
+
+        <a href="{{ url_for('home') }}" class="logo">
+              <img class="logo-img"
+         src="{{ url_for('static', filename='images/logo/logo.png') }}"
+         alt="Logo">
+
+            <div class="logo-text">
+                <span>LungVision</span>
+                <strong>AI</strong>
+            </div>
+
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('predict_page') }}" class="nav-link">Predict</a>
+            <a href="{{ url_for('assistant_page') }}" class="nav-link">Assistant</a>
+            <a href="{{ url_for('specialists') }}" class="nav-link">Specialists</a>
+            <a href="{{ url_for('about') }}" class="nav-link">About</a>
+            <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+
+        </nav>
+
+        <a href="{{ url_for('predict_page') }}" class="get-started">
+
+            <span>Get Started</span>
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+    </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="assistant-hero">
+
+    <div class="hero-content">
+
+    <span class="badge">
+        <i class="fa-solid fa-robot"></i>
+        AI Medical Assistant
+    </span>
+
+    <h1 class="hero-title">
+    <span class="lungvision">LungVision</span>
+    <span class="ai-assistant">AI Assistant</span>
+</h1>
+
+    <p>
+        Ask questions about lung diseases, symptoms,<br>
+        chest X-rays, treatments and prevention.<br>
+        Powered by Google Gemini AI.
+    </p>
+
+</div>
+
+</section>
+
+<!-- ================= CHAT ================= -->
+
+<section class="chat-section">
+
+    <div class="chat-container">
+
+        <div class="chat-header">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>LungVision AI</h2>
+
+        </div>
+
+        <div
+            class="chat-box"
+            id="chatBox">
+
+            <div class="bot-message">
+
+                👋 Hello!
+
+                <br><br>
+
+                I'm your LungVision AI Assistant.
+
+                <br><br>
+
+                Ask me anything related to:
+
+                <ul>
+
+                    <li>Lung Diseases</li>
+
+                    <li>Pneumonia</li>
+
+                    <li>Tuberculosis</li>
+
+                    <li>Lung Cancer</li>
+
+                    <li>Chest X-rays</li>
+
+                    <li>COVID-19</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="chat-input">
+
+    <input
+        type="text"
+        id="userInput"
+        placeholder="Ask a medical question...">
+
+    <!-- Microphone Button -->
+    <button id="micBtn" title="Voice Input">
+        <i class="fa-solid fa-microphone"></i>
+    </button>
+
+    <!-- Send Button -->
+    <button id="sendBtn">
+        <i class="fa-solid fa-paper-plane"></i>
+    </button>
+
+</div>
+    </div>
+
+</section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="{{ url_for('static', filename='js/assistant.js') }}"></script>
+
+</body>
+</html>

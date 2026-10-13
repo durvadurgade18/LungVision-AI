@@ -1,0 +1,132 @@
+/* Fix navbar overlap */
+
+.appointment-page{
+    padding-top:20px;
+}
+
+.appointment-section{
+    margin-top:0;
+}
+.appointment-section{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    min-height:auto;
+    padding:30px 0 60px;
+}
+
+.appointment-card{
+    width:720px;
+    max-width:90%;
+    padding:45px;
+    border-radius:22px;
+    margin:auto;
+}
+.appointment-card h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#00D9FF;
+}
+
+#appointment-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+#appointment-form textarea{
+    resize:none;
+}
+
+#appointment-form .btn{
+    width:100%;
+    margin-top:10px;
+}
+
+.appointment-card:hover{
+    box-shadow:0 0 35px rgba(0,217,255,0.4);
+    transition:0.4s;
+}
+
+/* Date & Time Inputs */
+
+input[type="date"],
+input[type="time"]{
+    cursor:pointer;
+}
+
+/* Select Styling */
+
+select{
+    cursor:pointer;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .appointment-card{
+        width:100%;
+        padding:25px;
+    }
+
+    .appointment-card h1{
+        font-size:32px;
+    }
+
+}
+
+.appointment-page{
+    background-image:url("../images/background.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+.appointment-page::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,10,30,.65);
+    z-index:-1;
+}
+
+/* ---------- Form Fields ---------- */
+
+#appointment-form input,
+#appointment-form select,
+#appointment-form textarea{
+    width:100%;
+    box-sizing:border-box;
+    border:none;
+    outline:none;
+    border-radius:12px;
+    padding:16px 18px;
+    font-size:18px;
+    font-family:inherit;
+    background:#fff;
+}
+
+/* Same height for all inputs */
+
+#appointment-form input,
+#appointment-form select{
+    height:55px;
+}
+
+/* Textarea */
+
+#appointment-form textarea{
+    height:140px;
+    resize:none;
+    padding-top:16px;
+}
+
+/* Button */
+
+#appointment-form .btn{
+    height:60px;
+    border-radius:16px;
+    font-size:24px;
+    font-weight:700;
+}

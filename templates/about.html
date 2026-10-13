@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About | LungVision AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+
+</head>
+
+<body>
+
+<!-- ======================================
+            NAVBAR
+======================================= -->
+
+<header class="navbar">
+
+    <div class="container navbar-container">
+
+        <a href="{{ url_for('home') }}" class="logo">
+
+            <div class="logo-text">
+                <span>LungVision</span>
+                <strong>AI</strong>
+            </div>
+
+        </a>
+
+        <nav class="nav-menu">
+
+            <a href="{{ url_for('home') }}" class="nav-link">Home</a>
+            <a href="{{ url_for('predict_page') }}" class="nav-link">Predict</a>
+            <a href="{{ url_for('assistant_page') }}" class="nav-link">Assistant</a>
+            <a href="{{ url_for('specialists') }}" class="nav-link">Specialists</a>
+            <a href="{{ url_for('about') }}" class="nav-link">About</a>
+            <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+
+        </nav>
+
+        <a href="{{ url_for('predict_page') }}" class="get-started">
+
+            <span>Get Started</span>
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+        <button
+            class="menu-button"
+            id="menuButton"
+            aria-label="Open Menu">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+
+</header>
+
+<!-- ======================================
+            ABOUT HERO
+======================================= -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <div class="about-hero-grid">
+
+            <!-- LEFT SIDE -->
+
+            <div class="about-left">
+
+                <span class="about-badge">
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    ABOUT LUNGVISION AI
+
+                </span>
+
+                <h1>
+
+                    Revolutionizing
+
+                    <span>Lung Disease Detection</span>
+
+                    Using Artificial Intelligence
+
+                </h1>
+
+                <p>
+
+                    LungVision AI is an intelligent healthcare platform
+                    developed to assist doctors, hospitals and researchers
+                    by detecting multiple lung diseases from chest X-ray
+                    images using advanced Deep Learning and Computer Vision.
+
+                </p>
+
+                <div class="about-buttons">
+
+                    <a href="/predict" class="btn btn-primary">
+
+                        <i class="fa-solid fa-upload"></i>
+
+                        Start Detection
+
+                    </a>
+
+                    
+                    
+
+                </div>
+
+            </div>
+          
+            <!-- RIGHT SIDE -->
+
+            <div class="about-right">
+
+                <div class="about-image-card">
+
+                    <img src="{{ url_for('static', filename='images/illustrations/hero-lungs.png') }}"
+                         alt="Lung AI">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+        ABOUT INTRODUCTION
+======================================= -->
+
+<section class="about-intro">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WHO WE ARE</span>
+
+            <h2>AI for Better Healthcare</h2>
+
+            <p>
+
+                LungVision AI combines modern Artificial Intelligence
+                with medical imaging to support faster diagnosis,
+                reduce manual workload and improve patient care.
+
+            </p>
+
+        </div>
+
+        <div class="about-info-grid">
+
+            <div class="about-info-card">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <h3>Artificial Intelligence</h3>
+
+                <p>
+
+                    Deep learning algorithms analyse chest X-rays
+                    with remarkable accuracy.
+
+                </p>
+
+            </div>
+
+            <div class="about-info-card">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <h3>Healthcare</h3>
+
+                <p>
+
+                    Helping healthcare professionals make
+                    faster diagnostic decisions.
+
+                </p>
+
+            </div>
+
+            <div class="about-info-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Reliable</h3>
+
+                <p>
+
+                    Secure, reliable and easy-to-use
+                    diagnostic assistance.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+        HOW IT WORKS STARTS HERE
+======================================= -->
+
+<section id="workflow" class="about-workflow">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WORKFLOW</span>
+
+            <h2>How LungVision AI Works</h2>
+
+            <p>
+
+                Our AI follows an intelligent pipeline to analyse
+                chest X-ray images and generate predictions.
+
+            </p>
+
+        </div>
+                <!-- ==========================
+             WORKFLOW STEPS
+        =========================== -->
+
+        <div class="workflow-grid">
+
+            <!-- STEP 1 -->
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+
+                    01
+
+                </div>
+
+                <div class="workflow-icon">
+
+                    <i class="fa-solid fa-upload"></i>
+
+                </div>
+
+                <h3>Upload X-Ray</h3>
+
+                <p>
+
+                    Upload a chest X-ray image securely into the LungVision AI
+                    platform for automatic analysis.
+
+                </p>
+
+            </div>
+
+            <!-- STEP 2 -->
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+
+                    02
+
+                </div>
+
+                <div class="workflow-icon">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                </div>
+
+                <h3>AI Processing</h3>
+
+                <p>
+
+                    Our Deep Learning model processes the X-ray and extracts
+                    important lung features.
+
+                </p>
+
+            </div>
+
+            <!-- STEP 3 -->
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+
+                    03
+
+                </div>
+
+                <div class="workflow-icon">
+
+                    <i class="fa-solid fa-lungs"></i>
+
+                </div>
+
+                <h3>Disease Detection</h3>
+
+                <p>
+
+                    LungVision AI identifies possible lung diseases using
+                    advanced medical image analysis.
+
+                </p>
+
+            </div>
+
+            <!-- STEP 4 -->
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+
+                    04
+
+                </div>
+
+                <div class="workflow-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+                <h3>Confidence Score</h3>
+
+                <p>
+
+                    The system calculates prediction confidence for each
+                    detected disease.
+
+                </p>
+
+            </div>
+
+            <!-- STEP 5 -->
+
+            <div class="workflow-card">
+
+                <div class="workflow-number">
+
+                    05
+
+                </div>
+
+                <div class="workflow-icon">
+
+                    <i class="fa-solid fa-file-medical"></i>
+
+                </div>
+
+                <h3>Medical Report</h3>
+
+                <p>
+
+                    A detailed prediction report is generated to support
+                    healthcare professionals.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+        OUR MISSION
+====================================== -->
+
+<section class="about-mission">
+
+    <div class="container">
+
+        <div class="about-mission-grid">
+
+            <!-- LEFT -->
+
+            <div class="mission-image">
+
+               <img src="{{ url_for('static', filename='images/illustrations/medical-ai.png') }}" class="about-image" alt="Medical AI">
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="mission-content">
+
+                <span class="about-badge">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    OUR MISSION
+
+                </span>
+
+                <h2>
+
+                    Making Lung Disease Detection
+                    Faster, Smarter & More Accurate
+
+                </h2>
+
+                <p>
+
+                    Our mission is to bridge Artificial Intelligence and
+                    healthcare by providing an intelligent assistant that
+                    supports doctors in detecting lung diseases quickly and
+                    accurately from chest X-ray images.
+
+                </p>
+
+                <ul class="mission-list">
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        AI-assisted medical diagnosis
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Fast X-ray image analysis
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Early disease identification
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Reliable prediction reports
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Secure healthcare platform
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+        DISEASES SECTION STARTS
+====================================== -->
+
+<section class="about-diseases">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>SUPPORTED DISEASES</span>
+
+            <h2>Diseases Detected by LungVision AI</h2>
+
+            <p>
+
+                LungVision AI detects multiple lung diseases from chest
+                X-ray images using Deep Learning technology.
+
+            </p>
+
+        </div>
+
+        <div class="disease-grid">
+                        <!-- Tuberculosis -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/tuberculosis.png') }}" alt="Tuberculosis">
+
+                <h3>Tuberculosis</h3>
+
+                <p>
+                    A bacterial infection that mainly affects the lungs and spreads through the air.
+                </p>
+
+            </div>
+
+            <!-- COVID-19 -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/covid.png') }}" alt="COVID-19">
+
+                <h3>COVID-19</h3>
+
+                <p>
+                    Viral respiratory disease that causes inflammation and breathing difficulty.
+                </p>
+
+            </div>
+
+            <!-- Lung Cancer -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/lung-cancer.png') }}"alt="Lung Cancer">
+
+                <h3>Lung Cancer</h3>
+
+                <p>
+                    Early detection of abnormal lung cell growth improves treatment success.
+                </p>
+
+            </div>
+
+            <!-- Fibrosis -->
+
+            <div class="disease-card">
+
+               <img src="{{ url_for('static', filename='images/diseases/fibrosis.png') }}"alt="Pulmonary Fibrosis">
+
+                <h3>Pulmonary Fibrosis</h3>
+
+                <p>
+                    Lung tissue becomes scarred, reducing oxygen exchange inside the lungs.
+                </p>
+
+            </div>
+
+            <!-- Edema -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/edema.png') }}"alt="Pulmonary Edema">
+
+                <h3>Pulmonary Edema</h3>
+
+                <p>
+                    Fluid accumulation inside the lungs causes serious breathing problems.
+                </p>
+
+            </div>
+
+            <!-- Emphysema -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/emphysema.png') }}"alt="Emphysema">
+
+                <h3>Emphysema</h3>
+
+                <p>
+                    Damage to the lung air sacs reduces oxygen intake and airflow.
+                </p>
+
+            </div>
+
+            <!-- Atelectasis -->
+
+            <div class="disease-card">
+
+                <img src="{{ url_for('static', filename='images/diseases/atelectasis.png') }}" alt="Atelectasis">
+
+                <h3>Atelectasis</h3>
+
+                <p>
+                    Partial collapse of the lung that limits normal breathing function.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            OBJECTIVES
+===================================== -->
+
+<section class="about-objectives">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>OUR OBJECTIVES</span>
+
+            <h2>What We Aim To Achieve</h2>
+
+            <p>
+
+                LungVision AI is designed to improve healthcare by combining
+                Artificial Intelligence with medical imaging technology.
+
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-brain"></i>
+
+                <h3>Smart Diagnosis</h3>
+
+                <p>
+
+                    Assist doctors with AI-powered lung disease prediction.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h3>Fast Results</h3>
+
+                <p>
+
+                    Generate predictions in just a few seconds.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <h3>Better Healthcare</h3>
+
+                <p>
+
+                    Improve patient outcomes through early disease detection.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+          WHY CHOOSE US
+===================================== -->
+
+<section class="features-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WHY CHOOSE US</span>
+
+            <h2>Why LungVision AI?</h2>
+
+            <p>
+
+                Advanced AI technology designed for accurate, fast and secure
+                lung disease prediction.
+
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <h3>Deep Learning</h3>
+
+                <p>
+
+                    State-of-the-art CNN models analyse every chest X-ray.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>Secure Platform</h3>
+
+                <p>
+
+                    Patient privacy and uploaded images remain protected.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <h3>Doctor Friendly</h3>
+
+                <p>
+
+                    Designed to support healthcare professionals in diagnosis.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-lungs"></i>
+
+                <h3>7 Diseases</h3>
+
+                <p>
+
+                    Detects multiple lung diseases from a single X-ray.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>High Accuracy</h3>
+
+                <p>
+
+                    AI model trained on thousands of medical images.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-file-medical"></i>
+
+                <h3>Medical Report</h3>
+
+                <p>
+
+                    Generates clear AI prediction reports for review.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            STATISTICS
+===================================== -->
+
+<section class="statistics">
+
+    <div class="container statistics-container">
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-brain"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">AI Accuracy</span>
+
+                <strong>96.2%</strong>
+
+                <small>Deep Learning Model</small>
+
+            </div>
+
+        </div>
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-bolt"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">Prediction Time</span>
+
+                <strong>2 Sec</strong>
+
+                <small>Instant Analysis</small>
+
+            </div>
+
+        </div>
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">Medical Support</span>
+
+                <strong>24/7</strong>
+
+                <small>AI Assistance</small>
+
+            </div>
+
+        </div>
+
+        <div class="stat-item">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <div class="stat-content">
+
+                <span class="stat-title">Security</span>
+
+                <strong>100%</strong>
+
+                <small>Protected Data</small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =====================================
+        DISCLAIMER
+===================================== -->
+
+<section class="about-disclaimer">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>DISCLAIMER</span>
+
+            <h2>Important Medical Notice</h2>
+
+        </div>
+
+        <div class="about-disclaimer-box">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <p>
+
+                LungVision AI is an educational and research-based Artificial
+                Intelligence project. The prediction results generated by this
+                system should not be considered a final medical diagnosis.
+                Always consult a qualified healthcare professional for proper
+                medical advice and treatment.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+        CALL TO ACTION
+===================================== -->
+
+<section class="about-cta">
+
+    <div class="container">
+
+        <div class="about-cta-box">
+
+            <h2>Ready to Detect Lung Diseases with AI?</h2>
+
+            <p>
+
+                Upload your Chest X-ray and receive instant AI-assisted
+                prediction in seconds.
+
+            </p>
+
+            <a href="/predict" class="btn btn-primary">
+
+                <i class="fa-solid fa-upload"></i>
+
+                Start Prediction
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            FOOTER
+===================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div class="footer-logo">
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-lungs"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>LungVision AI</h3>
+
+                    <p>
+
+                        AI Powered Lung Disease Detection using
+                        Deep Learning and Computer Vision.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="/">Home</a>
+
+                <a href="/predict">Predict</a>
+
+                <a href="/#diseases">Diseases</a>
+
+                <a href="/about">About</a>
+
+                <a href="/contact">Contact</a>
+
+            </div>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+                <a href="#"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 LungVision AI. All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!-- =====================================
+            JAVASCRIPT
+===================================== -->
+
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
